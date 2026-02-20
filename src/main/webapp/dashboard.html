@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Student Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+</head>
+<body>
+
+<div class="dashboard">
+
+<h2>Student Dashboard</h2>
+
+<form action="CourseServlet" method="get">
+    <button class="course-btn">View All Courses</button>
+</form>
+
+<form action="EnrolledCoursesServlet" method="get">
+    <button class="enrolled-btn">My Enrolled Courses</button>
+</form>
+
+<form action="ProfileServlet" method="get">
+    <button class="profile-btn">My Profile</button>
+</form>
+
+<form action="LogoutServlet" method="get">
+    <button class="logout-btn">Logout</button>
+</form>
+
+</div>
+
+</body>
+</html>

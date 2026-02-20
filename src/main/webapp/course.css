@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background-color: #667eea;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e6e6ff;
+}
+
+button, input[type="submit"] {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+input[value="Enroll"] {
+    background-color: #28a745;
+}
+
+input[value="Enroll"]:hover {
+    background-color: #218838;
+}
+
+button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+input[value="View Enrolled Courses"] {
+    background-color: #17a2b8;
+}
+
+input[value="View Enrolled Courses"]:hover {
+    background-color: #138496;
+}
+
+input[value="Dashboard"] {
+    background-color: #667eea;
+}
+
+input[value="Dashboard"]:hover {
+    background-color: #5a67d8;
+}
+
+input[value="Logout"] {
+    background-color: #dc3545;
+}
+
+input[value="Logout"]:hover {
+    background-color: #c82333;
+}
