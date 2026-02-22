@@ -9,41 +9,53 @@
 </head>
 <body>
 
-<div class="container">
+	<div class="container">
 
-<h2>Student Registration</h2>
+		<h2>Student Registration</h2>
 
-<form action="register" method="post">
+		<div id="messageBox" class="message" style="display: none;"></div>
 
-<label>Name</label>
-<input type="text" name="name">
+		<form action="register" method="post">
 
-<label>Gender</label>
-<input type="radio" name="gender" value="Male"> Male
-<input type="radio" name="gender" value="Female"> Female
-<input type="radio" name="gender" value="Other"> Other
+			<label>Name</label> <input type="text" name="name" required>
 
-<label>Mobile</label>
-<input type="text" name="mobile">
+			<label>Gender</label> <input type="radio" name="gender" value="Male"
+				required> Male <input type="radio" name="gender"
+				value="Female"> Female <input type="radio" name="gender"
+				value="Other"> Other <label>Mobile</label> <input
+				type="text" name="mobile" required> <label>Email</label> <input
+				type="email" name="mail" required> <label>Password</label> <input
+				type="password" name="password" required>
 
-<label>Email</label>
-<input type="email" name="mail">
+			<button type="submit">Register</button>
 
-<label>Password</label>
-<input type="password" name="password">
+		</form>
 
-<button type="submit">Register</button>
+		<form action="login.html" method="get">
 
-</form>
+			<label>If you have already registered</label>
+			<button type="submit">Login</button>
 
-<form action="login.html" method="get">
+		</form>
 
-<label>If you have already registered</label>
-<button type="submit">Login</button>
+	</div>
 
-</form>
+	<script>
+		const params = new URLSearchParams(window.location.search);
+		const messageBox = document.getElementById("messageBox");
 
-</div>
+		if (params.get("error")) {
+			messageBox.style.display = "block";
+			messageBox.classList.add("error");
+			messageBox.innerText = params.get("error");
+		}
+
+		if (params.get("success")) {
+			messageBox.style.display = "block";
+			messageBox.classList.add("success");
+			messageBox.innerText = params.get("success");
+		}
+	</script>
 
 </body>
 </html>
